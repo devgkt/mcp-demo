@@ -14,13 +14,10 @@ import java.util.Map;
 
 
 public class MyClientService {
-    //old:  "/Users/germanrodriguez/development/orahub/dbtools-commons/sqlcl-distribution/target/sqlcl-25.2.3/sqlcl/bin/sql"
-    //new: "/Users/germanrodriguez/development/orahub/dbtools-commons/dbtools-distributions/sqlcl-distribution/target/sqlcl-25.3.0-SNAPSHOT/sqlcl/bin/sql"
-    //  "sqlcl", "GET /Users/germanrodriguez/Documents/my_command.sql\n",
     public static void main(String[] args) {
 
         //Configure Server
-        ServerParameters params = ServerParameters.builder("/Users/germanrodriguez/development/orahub/dbtools-commons/dbtools-distributions/sqlcl-distribution/target/sqlcl-25.3.0-SNAPSHOT/sqlcl/bin/sql")
+        ServerParameters params = ServerParameters.builder("/path_to_sqlcl/sqlcl/bin/sql")
                 .args("-mcp")
                 .build();
         McpTransport transport = new StdioClientTransport(params);
